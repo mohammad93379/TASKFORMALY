@@ -1,0 +1,19 @@
+<form [formGroup]="form" (ngSubmit)="submit()">
+  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button">Submit</button>
+  <button type="button" class="btn btn-default" (click)="options.resetModel">Reset</button>
+</form>
+
+<hr><hr><hr>
+
+<form [formGroup]="form2" (ngSubmit)="submit()">
+  <formly-form [model]="model2" [fields]="fields2" [options]="options2" [form]="form2"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Submit</button>
+</form>
+
+<hr><hr><hr>
+
+<form [formGroup]="form3" (ngSubmit)="submit()">
+  <formly-form [model]="model3" [fields]="fields3" [options]="options3" [form]="form3"></formly-form>
+  <button type="submit" class="btn btn-primary submit-button" [disabled]="!form.valid">Submit</button>
+</form>
